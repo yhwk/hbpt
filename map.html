@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" href="img/logb.ico" />
+<link rel="stylesheet" href="css/top.css" typ"text/css/>
+<link rel="stylesheet" href="css/search.css" typ"text/css/>
+<link rel="stylesheet" href="css/next.css" typ"text/css/>
+<link rel="stylesheet" href="css/bside.css" typ"text/css/>
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src='scripts/jquery-ui.js'></script>
+<script type="text/javascript" src="scripts/ali.js"></script>
+<script src="scripts/search.js" type="text/javascript"></script>
+<script src="scripts/left.js" type="text/javascript"></script>
+<title>地图显示</title>
+<style type="text/css" >
+#main {height:700px;}
+#ann1 {margin-left: 1px;margin-top: 10px;}
+#ann2 {margin-left: 1px;margin-top: 50px;}
+#sbox{margin-left: 1005px;margin-top: 82px;}
+#boc1 {}
+#leftc1{margin-top:40px;}
+#leftc3{box-shadow: 0px 0px 0px #462648;color:#39C;cursor:default;width:175px;line-height:30px;}
+#ab, #ac{padding:20px;height:30px;}
+#ab ul, #ac ul, #ad ul{position:absolute;left:-25px;margin-top:-10px;}
+#ab li, #ac li, #ad li{margin-top:5px;height:30px;width:120px;text-align:center;line-height:30px;font-family:"幼圆";overflow:hidden;}
+#ab li:hover, #ac li:hover, #ad li:hover{background:#D8FEFA;cursor:pointer;}
+body {background:url(img/back2.jpg) ;background-size:60%; background-repeat:no-repeat;}
+#footer{position:absolute;margin-top:840px;height:70px;}
+
+</style>
+
+</head>
+<body>
+<div id="wapper">
+ <div id="header">
+   <div id="nav"></div>
+     <div id="ltle"><p>环保信息监测管理系统</p></div>
+      <div class="nav-bt" id="nb1"><img src="img/home.png" style="height:18px; width:20px;"/><p>主页</p></div> 
+      <div class="nav-bt" id="nb2"><img src="img/msg.png" style="height:18px; width:30px;"/><p>消息中心</p></div>
+     <div class="nav-bt" id="nb3">登录</div><div class="nav-bt" id="nb4">注册</div>
+     <div class="nav-bl" id="nt1">环保工程 |</div><div class="nav-bl" id="nt2">环保教育 |</div>
+     <div class="nav-bl" id="nt3">地图显示 |</div> 
+     <div class="nav-bl" id="nt4">环保监测 |</div> 
+     <div class="nav-bl" id="nt5">个人设置</div>
+     <div class="top" id="bbg"></div>
+     <div class="top" id="tbg"></div>
+   <div id="lb"><img src="img/4.png" width="40%" height="50%"/></div>
+     <div id="lb2">
+        <ul><li id="-1">气温突降，大家别感冒了: )</li>
+        <li>明天放假</li>
+        <li id=1>牛横断注意</li>
+        </ul>
+     </div>
+  <div class="top" id="top"> </div>
+  <div id="log"><img src="img/5.png" width="94%" height="100%"/></div>
+ 
+  <div id="sbox">
+    <div id="search"></div>
+    <div id="st">
+     <form id="sf" name="sf" method="post" action="">
+     <input type="text" name="search" />
+     </form>
+    </div>
+  </div>
+  
+ </div>
+ 
+ <div id="qbox">
+  <div id="sjx"><canvas id="c" width="50px" height="50px"></canvas></div> 
+ </div>
+ <div id="bside">
+     <ul>
+        <li>设置</li>
+        <li>链接</li>
+        <li style="cursor:help">帮助</li>
+        <li style="cursor:help">关于本站</li>
+   </ul>
+ </div>
+
+<div id="main">
+  <div id="title3" class="main-tle"><p>地图显示</p>
+  </div>
+  <iframe id="f1" style="width:100%;border-width:0;overflow:hidden;" height="600px";
+  src="imap.html" >
+  </iframe>
+</div>
+
+ <div id="leftbar">
+  <div id="leftbutton" ><img src="img/jt.png" width="20" height="70"/></div>
+  <div id="leftbutton2" ><img src="img/jt2.png" width="20" height="70"/></div>
+    <div id="mod1"></div>
+    <div id="mod2"></div>
+  <div class="lc" id="leftc1" onClick="document.location='ind.html';">环保信息</div>
+  <div class="lc" id="leftc2" onClick="document.location='edu.html';">环保教育</div>
+  <div class="lc" id="leftc3" onClick="document.location='map.html';" >地图显示</div>
+  <div class="lc" id="leftc4" onClick="document.location='monitor.html';">环保监测</div>
+  <div class="lc" id="leftc5" onClick="document.location='pset.html';">个人设置</div>
+  <div class="lc" id="leftc6"></div>
+ </div>
+ <div id="nextbar">
+  <div id="accordion">
+	<h3 id="h1">环保工程显示</h3>
+	 <div id="ab" class="ac-bt"><ul><li>地图显示</li></ul></div>
+	<h3 id="h2">环保监测显示</h3>
+	 <div id="ac" class="ac-bt"><ul><li>地图显示</li></ul></div>
+   </div>
+ </div>  
+ <div id="footer">
+  <div id="fbox">
+     <div id="weixin"> <img src="./webpage_files/weixin.png" style="height:30%;position:absolute;margin-top:160px;">
+       <div id="ewm" style="display: none;"><img src="./webpage_files/ewm.png"></div>
+     </div>
+   </div>
+</div> 
+</div>
+</body>
+<script>
+gotoTop(); 
+  var ca=document.getElementById("c");
+  var cxt=ca.getContext("2d");
+  cxt.beginPath();
+  cxt.moveTo(30,50);
+  cxt.lineTo(50,50);
+  cxt.lineTo(50,0);
+  cxt.lineTo(30,50);
+  cxt.fillStyle="#fff";
+  cxt.fill();
+  cxt.closePath();
+  
+ $(function() {
+    $( "#accordion" ).accordion();
+  }); 
+</script>
+</html>

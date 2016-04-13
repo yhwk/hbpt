@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/login.js"></script>
+<link rel="stylesheet" href="css/login.css" typ"text/css/>
+<link rel="stylesheet" href="css/top.css" typ"text/css/>
+<link rel="shortcut icon" href="img/logb.ico" />
+<style type="text/css">
+</style>
+<title>登录</title>
+</head>
+<body>
+<div id="ltle" onClick="window.location.href='webpage.html'"><p>环保信息监测管理系统</p></div>
+ <div class="top" id="bbg"></div>
+ <div class="top" id="tbg"></div>
+ <div class="top" id="top"> </div>
+   <div id="log"><img src="img/5.png" width="94%" height="100%"/></div>
+   
+<div id="logbox">
+  <div id="logback"></div>
+    <div>
+      <div class="logtle" id="logtle1"><p id="p1">环保信息管理平台</p><p id="p2"><a><<</a>&nbsp;&nbsp;信息管理平台后台</p><div>
+      <div class="logtle" id="logtle2"><p id="p3">>></p><div>
+    </div>
+      <div>
+    </div>
+    
+    
+  <div id="logform">
+      <form name="form1" id="form1" method="post" action="">
+       <input type="text" id="pname" value="用户名"/><br/>
+       <input type="text" maxLength="13" id="psd" value="密码"/><br/>
+       <div id="bt" onClick="document.location='webpage.html'" >登录</div>
+       <div id="zc" onClick="document.location='reg.html'">注册</div>
+       <div id="wjmm" onClick="document.location='psdchange.html'">忘记密码？</div>
+      </form>
+  </div>
+  <div id="logform2">
+      <form name="form2" id="form2" method="post" action="">
+       <input type="text" id="pname"/><br/>
+       <input type="password" maxLength="13" id="psd"/><br/>
+       <div id="bt" onClick="document.location='ind.html'">登录</div>
+     </form>
+  </div>
+  
+  
+  
+</div>
+</body>
+<script>
+$(document).ready(function(e) {
+$("#logtle2 p").click(function(){
+	$("#logform").fadeOut(200);
+	$("#p3").fadeOut(200);
+	$("#logtle1").animate({left:'200px'});
+	$("#p1").hide();
+	$("#logform2").fadeIn(600);
+	$("#p2").fadeIn(800);
+	});
+$("#p2 a").click(function(){
+	$("#logform2").fadeOut(200);
+	$("#logtle1").animate({left:'0px'});
+	$("#p2").hide();
+	$("#logform").fadeIn(600);
+	$("#p3").fadeIn(800);
+	$("#p1").fadeIn(800);
+	});
+
+$("#bt").click(function(){$(this).css("box-shadow","none")});
+	
+	
+	});
+</script>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" href="img/logb.ico" />
+<link rel="stylesheet" href="css/top.css" typ"text/css/>
+<link rel="stylesheet" href="css/search.css" typ"text/css/>
+<link rel="stylesheet" href="css/next.css" typ"text/css/>
+<link rel="stylesheet" href="css/bside.css" typ"text/css/>
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src='scripts/jquery-ui.js'></script>
+<script type="text/javascript" src="scripts/ali.js"></script>
+<script src="scripts/search.js" type="text/javascript"></script>
+<script src="scripts/left.js" type="text/javascript"></script>
+<title>个人设置</title>
+<style type="text/css" >
+body {background:url(img/back2.jpg);background-size:90%; background-repeat:no-repeat;}
+#main {
+	position: absolute;
+	width: 82%;height: 1100px;
+	z-index: -1;
+	left: 200px;top: 125px;
+	background-color: #F2F9F9;box-shadow: 0px  3px  3px #CCC;
+}
+#ann1 {left: 1px;top: 10px;}
+#ann2 {left: 1px;top: 50px;}
+#sbox{left: 1000px;top: 82px;}
+#qbox{left: 1310px;top: 73px;}
+#leftc1{margin-top:40px;}
+#leftc5{box-shadow: 0px 0px 0px #462648;color:#39C;cursor:pointer;width:175px;line-height:30px;}
+#ac, #ad{height:55px;padding:20px;}
+#ab ul, #ac ul, #ad ul{position:absolute;left:-25px;margin-top:-10px;}
+#ab li, #ac li, #ad li{margin-top:5px;height:30px;width:120px;text-align:center;line-height:30px;font-family:"幼圆";overflow:hidden;}
+#ab li:hover, #ac li:hover, #ad li:hover{background:#D8FEFA;cursor:pointer;}
+
+
+#apDiv1 {
+	position: absolute;
+	width: 100%;
+	height: 33px;
+	z-index: 3;
+}
+</style>
+
+</head>
+<body>
+<div id="wapper">
+<div id="nav"></div>
+  <div id="ltle"><p>环保信息监测管理系统</p></div>
+   <div class="nav-bt" id="nb1"><img src="img/home.png" style="height:18px; width:20px;"/><p>主页</p></div> 
+   <div class="nav-bt" id="nb2"><img src="img/msg.png" style="height:18px; width:30px;"/><p>消息中心</p></div>
+  <div class="nav-bt" id="nb3">登录</div><div class="nav-bt" id="nb4">注册</div>
+  <div class="nav-bl" id="nt1">环保信息 |</div><div class="nav-bl" id="nt2">环保教育 |</div>
+  <div class="nav-bl" id="nt3">地图显示 |</div> 
+  <div class="nav-bl" id="nt4">环保监测 |</div> 
+  <div class="nav-bl" id="nt5">个人设置</div>
+<div class="top" id="bbg"></div>
+<div class="top" id="tbg"></div>
+<div id="lb"><img src="img/4.png" width="40%" height="50%"/></div>
+     <div id="lb2">
+        <ul><li id="-1">气温突降，大家别感冒了: )</li>
+        <li>明天放假</li>
+        <li id=1>牛横断注意</li>
+        </ul>
+     </div>
+  <div class="top" id="top"> </div>
+<div id="log"><img src="img/5.png" width="94%" height="100%"/></div>
+ 
+<div id="sbox">
+   <div id="search"></div>
+   <div id="st">
+     <form id="sf" name="sf" method="post" action="">
+     <input type="text" name="search" />
+     </form>
+   </div>
+ </div>
+ 
+ <div id="qbox">
+  <div id="sjx"><canvas id="c" width="50px" height="50px"></canvas></div> 
+ </div>
+ <div id="bside">
+     <ul>
+        <li>设置</li>
+        <li>链接</li>
+        <li style="cursor:help">帮助</li>
+        <li style="cursor:help">关于本站</li>
+   </ul>
+</div>
+
+<div id="main">
+  <iframe id="f1" style="width:100%;border-width:0;overflow:hidden;" height="550px";
+  src="grsz.html" >
+    </iframe>
+
+</div>
+
+ <div id="leftbar">
+   <div id="leftbutton" ><img src="img/jt.png" width="20" height="70"/></div>
+   <div id="leftbutton2" ><img src="img/jt2.png" width="20" height="70"/></div>
+     <div id="mod1"></div>
+     <div id="mod2"></div>
+   <div class="lc" id="leftc1" onClick="document.location='ind.html';">环保信息</div>
+   <div class="lc" id="leftc2" onClick="document.location='edu.html';">环保教育</div>
+   <div class="lc" id="leftc3" onClick="document.location='map.html';">地图显示</div>
+   <div class="lc" id="leftc4" onClick="document.location='monitor.html';">环保监测</div>
+   <div class="lc" id="leftc5">个人设置</div>
+   <div class="lc" id="leftc6"></div>
+ </div>
+ <div id="nextbar">
+  <div id="accordion">
+	<h3 id="h1">个人设置</h3>
+	<div id="ab"><ul><li>修改密码</li><li>更改信息</li><li>信息设置</li></ul></div>
+	<h3 id="h2">操作记录</h3>
+	<div id="ac"><ul><li>登录日志</li><li>操作记录</li></ul></div>
+	<h3 id="h3">角色与权限</h3>
+	<div id="ad"><ul><li>权限查询</li><li>权限更改</li></ul></div>
+   </div>
+ </div>  
+<div id="gotoTop"><img src="img/tool/jt3.png" style="width:40px;"> </div>
+</div>
+</body>
+<script>
+gotoTop(); 
+  var ca=document.getElementById("c");
+  var cxt=ca.getContext("2d");
+  cxt.beginPath();
+  cxt.moveTo(30,50);
+  cxt.lineTo(50,50);
+  cxt.lineTo(50,0);
+  cxt.lineTo(30,50);
+  cxt.fillStyle="#fff";
+  cxt.fill();
+  cxt.closePath();
+  
+ $(function() {
+    $( "#accordion" ).accordion();
+  }); 
+ $(window).load(function(){$("#ab").css("height","88px");});
+</script>
+</html>

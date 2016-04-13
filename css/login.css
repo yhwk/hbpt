@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* CSS Document */
+#logbox{
+	position:relative;
+	left:500px;top:230px;
+	width:400px;height:250px;
+	box-shadow:0px 5px 5px #66FFCC;	
+    }
+#logback{
+	position:absolute;
+	width:400px;height:250px;
+	margin:0px;
+	background:#41CF59;
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;}
+
+
+body {background:url(../img/back.jpg);
+      background-size:110%;
+	  
+}
+#logform{
+	position: absolute;
+	margin: -10px -8px;
+	width: 350px;height: 160px;
+	left: -180px;top: 80px;
+	box-shadow:0px 0px 10px #FFFFFF;
+}
+#logform2{
+	position: absolute;
+	margin:-10px -165px;
+	width: 350px;height: 160px;
+	left: -170px;top: 80px;
+	box-shadow:0px 0px 10px  #FFFFFF;display:none;
+}
+
+#logbox form input,#regbox form input{
+	position:absolute;
+	height:36px;
+	border-style:none;
+    padding-left:15px;
+	box-shadow: inset 0 0 10px  #41CF59;;
+	color:#999;
+	}
+#pname{margin:20px 60px;width:180px;}
+#psd{margin:45px 60px;width:180px;}
+#sb{margin:65px 60px;width:80px;}
+#wjmm {
+	position: absolute;
+	width: 100px;height: 30px;
+	top: 74px;left:260px;
+	font-size: 16px;
+	}
+#wjmm:hover{color:#69F;}
+
+#bt{position:absolute;margin:75px 60px;height:30px;width:70px;box-shadow:0px 0px 10px  #FFFFFF;text-align:center;line-height:30px;}
+#zc{position:absolute;margin:80px 165px;width:70px;}
+#regbt{position:absolute;margin:175px 72px;height:30px;width:70px;box-shadow:0px 0px 10px  #FFFFFF;font-family: "微软雅黑";color:#FFF;text-align:center;line-height:30px;cursor:pointer;}
+#tudl{position:absolute;margin:175px 250px;height:30px;width:170px;font-family: "微软雅黑";color:#FFF;text-align:center;line-height:30px;cursor:pointer;}
+#zc:hover,#bt:hover, #regbt:hover, #tudl:hover{color:#69F;}
+
+
+.logtle{
+	position: absolute;width: 60px;
+	font-family: "微软雅黑";color: #FFF;	
+}
+
+.logtle p{font-size: 20px;}
+#p2{margin-left:-40px;width:230px;margin-top:20px;display:none;}
+#p2 a:hover{color:#69F;cursor:pointer;}
+#logtle1{margin:-5px 6px;border-bottom-style:solid;height:50px;width:170px;border-color:#CCF7F2;padding-left:10px;}
+#logtle2{margin:-66px 170px;cursor:pointer;}
+#logtle2 p:hover{color:#69F;}
+
+#regbox{	
+    position:relative;
+	left:350px;top:150px;
+	width:440px;height:400px;
+	box-shadow:0px 5px 5px #66FFCC;
+	}
+	
+#regform{
+	position: absolute;
+	margin: -10px 180px;
+	width: 440px;height: 310px;
+	left: -180px;top: 80px;
+	box-shadow:0px 0px 10px #FFFFFF;
+	}
+
+#regback{
+	position:absolute;
+	width:440px;height:400px;
+	margin:0px;
+	background:#41CF59;
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;}
+#rpname{margin:20px 70px;width:200px;}
+#rpsd{margin:50px 70px;width:200px;}
+#repsd{margin:80px 70px;width:200px;}
+#eml{margin:110px 70px;width:200px;}
+#mphone{margin:140px 70px;width:200px;}
+
+#changeform{
+	position: absolute;
+	margin: 100px -8px;
+	width: 350px;height: 160px;
+	box-shadow:0px 0px 10px #FFFFFF;
+}
+#changeform2{
+	position: absolute;
+	margin:100px -165px;
+	width: 350px;height: 160px;
+	box-shadow:0px 0px 10px  #FFFFFF;display:none;
+}

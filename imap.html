@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+    <meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+    <title>地图</title>
+    <!--引用百度地图API-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=15fdKtO07YOutujKrMRykf7U"></script>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/map.js"></script>
+    <link rel="stylesheet" href="css/map.css"/>
+  <style type="text/css">
+  #msg {
+	position: absolute;
+	width: 300px;
+	height: 400px;
+	left: 730px;
+	top: 10px;
+}
+ 
+ #msg ul{list-style:none;}
+  </style>
+  </head>
+  
+  <body>
+    <!--百度地图容器-->
+    <div style="width:700px;height:550px;border:#ccc solid 1px;font-size:12px;box-shadow:inset 0 0 5px #33CCFF;" id="map"></div>
+    <div id="msg">
+      <div id="msginf">
+         <ul>
+           <li>光谷大道项目</li>
+           <li>光谷北延线..</li>
+           <li>2013-03-05 </li>
+           <li>总部工程一部</li>
+           <li>	期待期待事情道歉大尺寸超范围出发分晚饭绯闻绯闻服务期待期待事情道歉大尺寸超范围出发分晚饭绯闻绯闻服务期待期待事情道歉大尺寸超范围出发分晚饭绯闻绯闻服务期待期待事情道歉大尺寸超范围出发分晚饭绯闻绯闻服务期待期待事情道歉大尺寸超范围出发分晚饭绯闻绯闻服务</li>
+         </ul> 
+         <div id="inbt">搜索<img src="img/tool/jt.png" style="width:35%;height:65%;"/></div>
+      </div>
+      <div id="msgsh">
+      <form method="post" action="">
+        &nbsp&nbsp工程名称: <input type="text" name=""/><br/>
+        &nbsp&nbsp工程地点: <input type="text" name=""/><br/>
+        &nbsp&nbsp负责单位: <input type="text" name=""/><br/>
+        &nbsp&nbsp起始时间: <input type="date" name=""/><br/>
+         <p>&nbsp&nbsp详细信息:&nbsp;</p><textarea name="msg" style="width:200px;;height:100px;" ></textarea>
+      </form><br/>
+         <div id="mbt">搜索</div>
+         <div id="down"><img src="img/tool/jt2.png"  style="width:10%;height:10%;"/></div>
+      </div>
+    </div>
+    <div id="mtab"></div>
+  </body>
+  
+  
+  
+  
+  
+  
+  <script type="text/javascript">
+  //创建和初始化地图函数：
+    function initMap(){
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      addMapControl();//向地图添加控件
+      addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){ 
+      map = new BMap.Map("map"); 
+      map.centerAndZoom(new BMap.Point(114.317197,30.437675),11);
+    }
+    function setMapEvent(){
+      map.enableScrollWheelZoom();
+      map.enableKeyboard();
+      map.enableDragging();
+      map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+      target.addEventListener("click",function(){
+        target.openInfoWindow(window);
+      });
+    }
+    function addMapOverlay(){
+      var markers = [
+        {content:"我的备注",title:"1",imageOffset: {width:-115,height:-21},position:{lat:30.523326,lng:114.180942}},
+        {content:"我的备注",title:"2",imageOffset: {width:-69,height:-21},position:{lat:30.510383,lng:114.249932}}
+      ];
+      for(var index = 0; index < markers.length; index++ ){
+        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+        })});
+        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+        var opts = {
+          width: 200,
+          title: markers[index].title,
+          enableMessage: false
+        };
+        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+        marker.setLabel(label);
+        addClickHandler(marker,infoWindow);
+        map.addOverlay(marker);
+      };
+    }
+    //向地图添加控件
+    function addMapControl(){
+      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+      map.addControl(scaleControl);
+      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+      map.addControl(navControl);
+      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+      map.addControl(overviewControl);
+    }
+    var map;
+      initMap();
+  </script>
+</html>

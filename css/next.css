@@ -1,0 +1,79 @@
+@charset "utf-8";
+#leftbar {
+	background: #fff;
+	position:absolute;
+	width: 190px;
+	height: 644px;
+	z-index: 2;
+	left: -180px;
+	top: 110px;
+	box-shadow:5px  5px  5px #CCC;
+	border-radius: 10px;
+	border-top-width: thin;
+	border-right-width: thin;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-color:#7BC1AE;
+}/* CSS Document */
+#leftbutton {
+	position: absolute;
+	width: 20px;
+	height: 69px;
+	z-index: 3;
+	margin-left: 175px;
+	margin-top: 201px;
+}
+#leftbutton2 {
+    
+	position: absolute;
+	width: 20px;
+	height: 80px;
+	z-index: 3;
+	margin-left: 175px;
+	margin-top: 201px;
+    display:none;
+}
+.lc{position:absolute;margin-left:-10px;box-shadow: 5px 5px 5px #462648;background:#000;height:40px;width:170px;
+font-family:"微软雅黑";color:#FFF;text-align:center;}
+.lc:hover{box-shadow: 0px 0px 0px #462648;color:#39C;cursor:pointer;width:175px;line-height:30px;}
+
+
+
+
+#nextbar {
+	position: absolute;
+	width: 150px;
+	height: 667px;
+	z-index: 0;
+	margin-left: 37px;
+	margin-top: 130px;
+	border-top-width: thick;
+	border-top-style: solid;
+	border-top-color: #0FF;
+}
+#ab,#ac,#ad{background:url(../img/beij.png);}
+#accordion h3{background:#F2F9F9;font-family:"微软雅黑";box-shadow:inset 0px 0px 2px #66CC99;}
+.ab{height:50px;}
+.ab a{width:80px;}
+
+
+#mod1 {
+	position: absolute;
+	width: 13px;
+	height: 145px;
+	z-index: 3;
+	margin-left:177px;
+	margin-top: 60px;
+    background: -webkit-linear-gradient(bottom,black, white); /* Safari*/
+    background: -o-linear-gradient(top,black, white); /* Opera*/
+    background: -moz-linear-gradient(top,black, white); /* Firefox*/
+    background: linear-gradient(top,black, white); /* 标准的语法 */}
+    
+}
+
+#leftc1{margin-top:40px;}
+#leftc2{margin-top:84px;}
+#leftc3{margin-top:128px;}
+#leftc4{margin-top:172px;}
+#leftc5{margin-top:216px;}
+#leftc6{margin-top:260px;}
